@@ -1,0 +1,35 @@
+{
+  "name": "ticket-voice-bot",
+  "version": "1.0.0",
+  "description": "Discord bot ภาษาไทย: ระบบตั๋วสนับสนุน + ห้องเสียงชั่วคราว ใช้ Supabase (PostgreSQL) เป็นฐานข้อมูลกลาง",
+  "main": "index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js",
+    "setup-db": "node setup-db.js",
+    "check": "node --check index.js && node --check deploy-commands.js && node --check supabase.js && node --check setup-db.js && node --check dashboard/server.js",
+    "dashboard": "node dashboard/server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "ticket",
+    "tempvoice",
+    "supabase"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "pg": "^8.23.0"
+  }
+}
